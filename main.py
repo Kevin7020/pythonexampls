@@ -7,12 +7,11 @@ import imported
 #print("Concate %s" % "Nando")
 
 parser = argparse.ArgumentParser(description='Brakes your pc')
-parser.add_argument('String', metavar='N', type=str, nargs='+',
-                    help='a name for this mofo')
+parser.add_argument('-n', '--name', type=str, help='a name for this mofo')
 
 args = parser.parse_args()
 
-cohete = args.String[0] #"Saturno"
+cohete = args.name #"Saturno"
 
 print(cohete.upper())
 
