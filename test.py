@@ -46,4 +46,12 @@ def hipotenusa(p1, p2):
     print(resultado)
 
 
-hipotenusa((30, 30), (50, 60))
+#hipotenusa((30, 30), (50, 60))
+
+def listcleaner(listToClean):
+    listToClean = set(listToClean)
+    list(listToClean)
+    return listToClean
+
+somelist = [1, 1, 2, 3]
+print(listcleaner(somelist))
