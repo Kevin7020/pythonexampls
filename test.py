@@ -55,3 +55,8 @@ def listcleaner(listToClean):
 
 somelist = [1, 1, 2, 3]
 print(listcleaner(somelist))
+
+################################################
+li = [1, 2, 55, 77, 2]
+for indice, valor in enumerate(li):
+    print(f"Indice: {str(indice)}, valor: {str(valor)}")

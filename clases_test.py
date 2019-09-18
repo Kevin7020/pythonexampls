@@ -13,6 +13,10 @@ class point():
 p1 = point(22, 30)
 p2 = point(25, 35)
 
+isinstance(p1, point) # verifies if the instance comes from the given class
+p1.__dict__
+p1.__dict__["x"]
+p1.__dict__["x"] = "50"
 print(p1 - p2)
 
 

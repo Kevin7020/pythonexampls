@@ -15,21 +15,27 @@ side6 = 0
 def dado():
     return random.randrange(1, 7)
 
-for roll in range(1000):
+for roll in range(100000000):
     sideResult = dado()
 
     if sideResult == 1:
         side1 += 1
+        continue #Go back to the for loop
     if sideResult == 2:
         side2 += 1
+        continue
     if sideResult == 3:
         side3 += 1
+        continue
     if sideResult == 4:
         side4 += 1
+        continue
     if sideResult == 5:
         side5 += 1
+        continue
     if sideResult == 6:
         side6 += 1
+        continue
 
 print("El numero 1 salio {0} veces".format(side1))
 print("El numero 2 salio {0} veces".format(side2))

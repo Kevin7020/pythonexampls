@@ -18,3 +18,8 @@ print(cohete.upper())
 print("Hola mi amigo {0} talves esto no {1}".format("Saturno","funcione"))
 #print("\n" *5)
 print(f"hola {cohete}")
+
+#slicing
+#li = [1, 2, 3]
+#li[:2]
+#li[:]
