@@ -45,25 +45,26 @@ with open("planilla.csv", newline='') as csvfile:
     for row in planillaReader:
         print(row)
         #['kevin,18/12/1900,1006,3,240']
-        trab = Trabajador(row[0], row[1], row[2], row[3])
+        trab = Trabajador(row[0], row[1], row[2], int(row[3]))
         planilla[row[2]] = trab
-        hours_worked[row[2]] = row[4]
+        hours_worked[row[2]] = int(row[4])
 
 print(planilla)
 print(hours_worked)
 
-# Contn = "y"
-# while Contn.lower() != "n":
-#     name = input("Ingrese el nombre del trabajador: \n")
-#     dte = input("Ingrese la fecha de nacimiento del trabajador: \n")
-#     work_id = int(input("Ingrese el id del trabajador: \n"))
-#     work_fare = int(input("Ingrese la tarifa del trabajador: \n"))
-#     work_hours = int(input("Ingrese las horas laboradas del trabajador: \n"))
-#     trab = Trabajador(name, dte, work_id, work_fare)
+""" Contn = "y"
+ while Contn.lower() != "n":
+     name = input("Ingrese el nombre del trabajador: \n")
+     dte = input("Ingrese la fecha de nacimiento del trabajador: \n")
+     work_id = int(input("Ingrese el id del trabajador: \n"))
+     work_fare = int(input("Ingrese la tarifa del trabajador: \n"))
+     work_hours = int(input("Ingrese las horas laboradas del trabajador: \n"))
+     trab = Trabajador(name, dte, work_id, work_fare)
 
-#     planilla[work_id] = trab
-#     hours_worked[work_id] = work_hours
-#     Contn = input("Desea ingresar otro trabajador? N/n: \n")
+     planilla[work_id] = trab
+     hours_worked[work_id] = work_hours
+     Contn = input("Desea ingresar otro trabajador? N/n: \n")
+"""
 
 total = 0
 for item in planilla:
