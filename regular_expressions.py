@@ -20,9 +20,12 @@ print(numeros)
 
 ipconfig = os.popen('ipconfig').read()
 
-splited = re.findall(r'\d+\.\d+\.\d+\.\d+', ipconfig)
+splited = re.findall(r'\d+\.\d+\.\d+\.\d+', ipconfig, flags=re.IGNORECASE+re.MULTILINE)
+print("1- " + str(splited[0]))
 
-print(splited[0])
 
 #\d+\.\d+\.\d+\.\d+
 #[0-225]+\.[0-225]+\.[0-225]+\.[0-225]+
+
+splited = re.findall(r'(\d+\.\d+\.\d+\.\d+){1}', ipconfig)
+print("2- " + str(splited))
